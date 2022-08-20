@@ -41,7 +41,7 @@
     position: absolute;
     content: '';
     left: -15px;
-    bottom: 0px;
+    bottom: 0;
     width: 15px;
     height: 15px;
     background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 15px, rgba(0, 0, 0, 0.85) 0);

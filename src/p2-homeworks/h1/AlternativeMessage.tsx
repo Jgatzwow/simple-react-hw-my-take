@@ -14,7 +14,7 @@ function AlternativeMessage(props: PropsType) {
     return (
         <div className={styles.message__comp}>
             <div className={styles.avatar__block}>
-                <img src={avatar} alt="Profile avatar picture"/>
+                <img src={avatar} alt="Profile avatar"/>
             </div>
             <div className={styles.info__block}>
                 <h2 className={styles.name}>{name}</h2>

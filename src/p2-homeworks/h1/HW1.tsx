@@ -1,6 +1,6 @@
 import React from 'react'
-import Message from "./Message";
-import AlternativeMessage from "./AlternativeMessage";
+import Message from './Message';
+import AlternativeMessage from './AlternativeMessage';
 
 const messageData = [
     {
@@ -15,6 +15,24 @@ const messageData = [
         message: 'some text2',
         time: '19:00',
     },
+    {
+        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
+        name: 'Some Name2',
+        message: 'some text2',
+        time: '19:00',
+    },
+    {
+        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
+        name: 'Some Name2',
+        message: 'some text2',
+        time: '19:00',
+    },
+    {
+        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
+        name: 'Some Name2',
+        message: 'some text2',
+        time: '19:00',
+    }
 ]
 
 function HW1() {
@@ -34,10 +52,13 @@ function HW1() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {<AlternativeMessage avatar={messageData[1].avatar}
-                                 name={messageData[1].name}
-                                 message={messageData[1].message}
-                                 time={messageData[1].time}/>}
+            {messageData.map( (el, idx) => {
+                return <AlternativeMessage key={idx}
+                                           avatar={el.avatar}
+                                           name={el.name}
+                                           message={el.message}
+                                           time={el.time}/>
+            })}
             <hr/>
         </div>
     )
