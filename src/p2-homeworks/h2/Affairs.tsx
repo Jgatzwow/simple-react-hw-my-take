@@ -1,11 +1,12 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType} from './HW2'
+import {AffairType, FilterType} from './HW2'
+import styles from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
-    deleteAffairCallback: any
+    data: Array<AffairType>
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -14,23 +15,33 @@ function Affairs(props: AffairsPropsType) {
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
+
         />
     ))
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
+    const setAll = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        props.setFilter('all')
+    } // need to fix
+    const setHigh = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        props.setFilter('high')
+    }
+    const setMiddle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        props.setFilter('middle')
+    }
+    const setLow = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        props.setFilter('low')
+    }
 
     return (
         <div>
 
             {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <div className={styles.affair__filter__btn__wrapper}>
+                <button className={styles.affair__filter_btn} onClick={setAll}>All</button>
+                <button className={styles.affair__filter_btn} onClick={setHigh}>High</button>
+                <button className={styles.affair__filter_btn} onClick={setMiddle}>Middle</button>
+                <button className={styles.affair__filter_btn} onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }

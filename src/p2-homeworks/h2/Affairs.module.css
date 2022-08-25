@@ -1,3 +1,118 @@
-.someClass {
+.hw2__wrapper {
+    max-width: 700px;
+    background: rgb(235, 240, 15);
+    background: linear-gradient(0deg, rgba(235, 240, 15, 1) 0%, rgba(22, 32, 231, 1) 100%);
+    margin-bottom: 200px;
+}
+
+.hw2__title {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.affair__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+
 
 }
+
+.affair__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.affair__priority {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.affair__delete_btn {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 200px;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+
+}
+
+.affair__delete_btn:hover,
+.affair__delete_btn:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.affair__delete_btn:hover {
+    transform: translateY(-1px);
+}
+
+.affair__delete_btn:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.affair__filter__btn__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    margin: 20px;
+}
+
+.affair__filter_btn {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.affair__filter_btn:hover,
+.affair__filter_btn:focus {
+    background-color: #07c;
+}
+
+.affair__filter_btn:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.affair__filter_btn:active {
+    background-color: #0064bd;
+    box-shadow: none;
+}
+
