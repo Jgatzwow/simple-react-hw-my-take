@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import Affairs from './Affairs'
 import styles from './Affairs.module.css'
+import {AddAffair} from './AddAffair';
 
 // types
 export type AffairPriorityType = 'high' | 'middle' | 'low' // need to fix any
@@ -8,7 +9,8 @@ export type AffairType = {
     _id: number
     name: string
     priority: string
-} // need to fix any
+}
+// need to fix any
 export type FilterType = 'all' | AffairPriorityType
 
 
@@ -42,16 +44,40 @@ export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<Aff
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
+    const [inputValueUpdate, setInputValueUpdate] = useState('')
+    const [affPriority, setAffPriority] = useState<FilterType>('high')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    console.log(filteredAffairs)
+
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
+    const onInputValueChange = (value: string) => {
+        setInputValueUpdate(value)
+    }
+    const onInputValueUpdateHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        onInputValueChange(e.currentTarget.value)
+    }
+    const addAffair = (aff: AffairType) => {
+        setAffairs([aff, ...affairs])
+        setInputValueUpdate('')
+    }
+
+    const onAddAffairHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        addAffair({_id: Date.now(), name: inputValueUpdate, priority: affPriority})
+    }
+
+    const onSelectPriorityChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+        setAffPriority(e.currentTarget.value as FilterType)
+    }
     return (
         <div className={styles.hw2__wrapper}>
             <hr/>
             <h2 className={styles.hw2__title}> homework 2</h2>
-
+            <AddAffair onAddAffairHandler={onAddAffairHandler}
+                       onSelectPriorityChangeHandler={onSelectPriorityChangeHandler}
+                       onInputValueUpdateHandler={onInputValueUpdateHandler}
+                       inputValueUpdate={inputValueUpdate}
+            />
             {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}

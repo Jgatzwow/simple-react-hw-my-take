@@ -14,13 +14,14 @@ function Affair(props: AffairPropsType) {
     }// need to fix
 
     return (
-        <div className={styles.affair__wrapper}>
+        <div>
+            <div className={styles.affair__wrapper}>
                 <div className={styles.affair__title}>{props.affair.name} </div>
                 <div className={styles.affair__priority}>[{props.affair.priority}]</div>
                 <div>
                     <button className={styles.affair__delete_btn} onClick={deleteCallback}>X</button>
                 </div>
-
+            </div>
         </div>
     )
 }
