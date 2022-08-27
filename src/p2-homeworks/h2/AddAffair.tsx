@@ -2,7 +2,7 @@ import React, {ChangeEvent} from 'react';
 import styles from './Affairs.module.css';
 
 type PropsType = {
-    onInputValueUpdateHandler: (e: ChangeEvent<HTMLInputElement>) =>void
+    onInputValueUpdateHandler: (e: ChangeEvent<HTMLInputElement>) => void
     onSelectPriorityChangeHandler: (e: ChangeEvent<HTMLSelectElement>) => void
     onAddAffairHandler: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
     inputValueUpdate: string
@@ -10,13 +10,15 @@ type PropsType = {
 }
 
 
-export const AddAffair = (props:PropsType) => {
-const {onAddAffairHandler,
-    onInputValueUpdateHandler,inputValueUpdate,
-    onSelectPriorityChangeHandler} = props
+export const AddAffair = (props: PropsType) => {
+    const {
+        onAddAffairHandler,
+        onInputValueUpdateHandler, inputValueUpdate,
+        onSelectPriorityChangeHandler
+    } = props
 
 
-    return(
+    return (
         <div className={styles.affair__add_block}>
             <input placeholder={'Enter Affair Name'}
                    onChange={onInputValueUpdateHandler}
