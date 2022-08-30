@@ -27,7 +27,7 @@ export const AddAffair = (props: PropsType) => {
             <div>
                 <label className={styles.label} htmlFor="priority">Choose priority:</label>
                 <select onChange={onSelectPriorityChangeHandler} id="priority">
-                    <option value="High">high</option>
+                    <option value="high">high</option>
                     <option value="middle">middle</option>
                     <option value="low">low</option>
                 </select>
