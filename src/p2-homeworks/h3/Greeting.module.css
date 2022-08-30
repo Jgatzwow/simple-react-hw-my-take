@@ -1,7 +1,26 @@
-.someClass {
 
+.hw3__title {
+    padding-left: 30px;
+}
+
+
+.addGreetings__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 300px;
+    padding-left: 30px;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.error__message {
+    font-size: 20px;
+    color: red;
+}
+
+.proper__input {
+    border: 1px solid black;
 }
