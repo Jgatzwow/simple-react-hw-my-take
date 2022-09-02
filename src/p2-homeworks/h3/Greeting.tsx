@@ -19,11 +19,10 @@ const Greeting: React.FC<GreetingPropsType> = (
         <div className={s.addGreetings__wrapper}>
             <div>
                 <input value={name} onChange={setNameCallback} className={inputClass}/>
-                {error ? <button disabled onClick={addUser}>add</button>
-                    : <button onClick={addUser}>add</button>}
+                <button disabled={!!error} onClick={addUser}>add</button>
                 <span>{totalUsers}</span>
             </div>
-            <span className={s.error__message}>{error}</span>
+            {error && <span className={s.error__message}>{error}</span>}
 
         </div>
     )
