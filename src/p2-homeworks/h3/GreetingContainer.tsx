@@ -32,28 +32,21 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     }
 
     const addUser = () => {
-         if (name === '') {
-             setError('Name is required')
-             console.log('Name is required');
+        if (name === '') {
+            setError('Name is required')
+            console.log('Name is required');
 
-         } else {
-        addUserCallback(name.trim())
-        alert(`Hello ${name.trim()}`)
+        } else {
+            addUserCallback(name.trim())
+            alert(`Hello ${name.trim()}`)
+            setName('')
+        }
+
     }
 
+    const keyDownHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        return e.key === 'Enter' ? addUser() : '';
     }
-
-    /*    const addUser = () => {
-            if (name.trim() === '') {
-                setError('Name is required')
-                alert(`Name is required`)
-                return
-            } else {
-                addUserCallback(name.trim())
-                alert(`Hello ${name.trim()} !`)
-                setName('')// need to fix
-            }
-        }*/
 
     const totalUsers = users.length // need to fix
 
@@ -64,6 +57,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            keyDownCallback={keyDownHandler}
         />
     )
 }

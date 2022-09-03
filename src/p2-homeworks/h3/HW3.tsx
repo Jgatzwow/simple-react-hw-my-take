@@ -19,7 +19,7 @@ function HW3() {
     }
 
     return (
-        <div>
+        <div className={s.hw3__wrapper}>
             <hr/>
             <h3 className={s.hw3__title}>homeworks 3</h3>
 
