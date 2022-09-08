@@ -24,7 +24,9 @@
 .error {
     border: 1px solid red;
 }
-
+.error:focus{
+    outline: none;
+}
 .error__message {
     font-size: 20px;
     color: red;

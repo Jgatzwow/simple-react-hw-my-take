@@ -24,7 +24,6 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 
-
 // pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
     switch (filter) {
@@ -60,8 +59,16 @@ function HW2() {
         onInputValueChange(e.currentTarget.value)
     }
     const addAffair = (aff: AffairType) => {
-        setAffairs([aff, ...affairs])
-        setInputValueUpdate('')
+        if (inputValueUpdate.trim() !== '') {
+            setAffairs([aff, ...affairs])
+            setInputValueUpdate('')
+        }
+
+    }
+    const onEnterPressHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' && inputValueUpdate.trim() !== '') {
+            addAffair({_id: Date.now(), name: inputValueUpdate.trim(), priority: affPriority})
+        }
     }
 
     const onAddAffairHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -76,6 +83,7 @@ function HW2() {
             <hr/>
             <h2 className={styles.hw2__title}> homework 2</h2>
             <AddAffair onAddAffairHandler={onAddAffairHandler}
+                       onEnterPressHandler={onEnterPressHandler}
                        onSelectPriorityChangeHandler={onSelectPriorityChangeHandler}
                        onInputValueUpdateHandler={onInputValueUpdateHandler}
                        inputValueUpdate={inputValueUpdate}

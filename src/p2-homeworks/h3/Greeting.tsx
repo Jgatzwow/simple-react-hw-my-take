@@ -1,5 +1,7 @@
 import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import SuperInputText from '../h4/common/c1-SuperInputText/SuperInputText';
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -19,8 +21,13 @@ const Greeting: React.FC<GreetingPropsType> = (
     return (
         <div className={s.addGreetings__wrapper}>
             <div className={s.addGreetings}>
-                <input onKeyDown={keyDownCallback} value={name} onChange={setNameCallback} className={inputClass}/>
-                <button disabled={!!error} onClick={addUser}>add</button>
+                <SuperInputText onKeyDown={keyDownCallback}
+                                value={name}
+                                onChange={setNameCallback}
+                                className={inputClass}/>
+                <SuperButton disabled={!!error} onClick={addUser}>
+                    add
+                </SuperButton>
                 <span className={s.total__users}>{totalUsers}</span>
             </div>
             {error && <span className={s.error__message}>{error}</span>}
