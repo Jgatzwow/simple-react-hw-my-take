@@ -92,6 +92,10 @@
     border: 2px solid #4285f4;
 }
 
+.disabled {
+    opacity: 0.5;
+}
+
 .total__users {
     width: 43px;
     height: 43px;

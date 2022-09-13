@@ -1,0 +1,45 @@
+.error404__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    flex-direction: column;
+    color: white;
+    max-width: 1480px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.error__code {
+    font-size: 80px;
+}
+
+.error__text {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.error__face {
+    font-size: 40px;
+}
+
+.navbar {
+    position: fixed;
+
+    display: flex;
+    gap: 10px;
+}
+
+.hw__link {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+
+.hw__link:hover,
+.hw__link:focus,
+.hw__link:active {
+    color: gold;
+}

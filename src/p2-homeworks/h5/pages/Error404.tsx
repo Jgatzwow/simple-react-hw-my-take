@@ -1,11 +1,12 @@
 import React from 'react'
+import s from '../../h5-rrd-v6/pages/Pages.module.css';
 
 function Error404() {
     return (
-        <div>
-            <div>404</div>
-            <div>Page not found!</div>
-            <div>—ฅ/ᐠ.̫ .ᐟ\ฅ—</div>
+        <div className={s.error404__wrapper}>
+            <div className={s.error__code}>404</div>
+            <div className={s.error__text}>Page not found!</div>
+            <div className={s.error__face}>—ฅ/ᐠ.̫ .ᐟ\ฅ—</div>
         </div>
     )
 }
