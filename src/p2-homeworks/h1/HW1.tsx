@@ -14,25 +14,8 @@ const messageData = [
         name: 'Some Name2',
         message: 'some text2',
         time: '19:00',
-    },
-    {
-        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
-        name: 'Some Name2',
-        message: 'some text2',
-        time: '19:00',
-    },
-    {
-        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
-        name: 'Some Name2',
-        message: 'some text2',
-        time: '19:00',
-    },
-    {
-        avatar: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/03/avatar-publicity_still-h_2019.jpg?w=1024',
-        name: 'Some Name2',
-        message: 'some text2',
-        time: '19:00',
     }
+
 ]
 
 function HW1() {

@@ -25,11 +25,48 @@
     font-size: 40px;
 }
 
-.navbar {
-    position: fixed;
-
+.navbar__wrapper {
+    position: relative;
+    height: 15vh;
     display: flex;
     gap: 10px;
+}
+
+.nav__links__closed {
+    position: absolute;
+    padding-left: 20px;
+    left: -180px;
+    transition: all 1s ease-out;
+}
+
+.nav__links__opened {
+    position: absolute;
+    padding-left: 20px;
+    left: 30px;
+    transition: all 2s ease-out;
+}
+
+.burger {
+    position: absolute;
+    cursor: pointer;
+    left: 10px;
+    top: 20%;
+    transition: all 1s ease-out;
+}
+
+.burger__none {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    left: 10px;
+    top: 20%;
+    transition: all 1s ease-out;
+}
+.line {
+    width: 30px;
+    height: 3px;
+    background: red;
+    margin: 5px;
 }
 
 .hw__link {
