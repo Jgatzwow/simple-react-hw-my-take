@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hw-by-ignat-pages/static/css/main.5194648a.css",
-    "main.js": "/hw-by-ignat-pages/static/js/main.cf3543e0.js",
+    "main.css": "/hw-by-ignat-pages/static/css/main.719201d5.css",
+    "main.js": "/hw-by-ignat-pages/static/js/main.76f5c21c.js",
     "index.html": "/hw-by-ignat-pages/index.html",
-    "main.5194648a.css.map": "/hw-by-ignat-pages/static/css/main.5194648a.css.map",
-    "main.cf3543e0.js.map": "/hw-by-ignat-pages/static/js/main.cf3543e0.js.map"
+    "main.719201d5.css.map": "/hw-by-ignat-pages/static/css/main.719201d5.css.map",
+    "main.76f5c21c.js.map": "/hw-by-ignat-pages/static/js/main.76f5c21c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5194648a.css",
-    "static/js/main.cf3543e0.js"
+    "static/css/main.719201d5.css",
+    "static/js/main.76f5c21c.js"
   ]
 }
