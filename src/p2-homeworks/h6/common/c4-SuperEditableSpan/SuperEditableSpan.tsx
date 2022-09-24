@@ -42,11 +42,8 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
     spanProps || {};
 
   const onEnterCallback = () => {
-    /* if (e.key === "enter") {
-
-         }*/
     // setEditMode() // выключить editMode при нажатии Enter
-
+    setEditMode(false);
     onEnter && onEnter();
   };
   const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -89,4 +86,4 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
   );
 };
 
-export default SuperEditableSpan
+export default SuperEditableSpan;
