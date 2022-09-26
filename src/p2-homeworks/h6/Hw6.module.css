@@ -1,0 +1,81 @@
+
+.hw6__wrapper {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 200px;
+    border: 1px solid red;
+}
+
+.title {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: block;
+    font-size: 20px;
+    padding: 16px 20px;
+    width: 20vw;
+    height: 7vh;
+    margin-bottom: 5px;
+}
+
+.span {
+    display: block;
+    font-size: 28px;
+    padding: 13px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20vw;
+    height: 7vh;
+    margin-bottom: 5px;
+}
+
+.button {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    width: 100px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.button:hover,
+.button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.button:active {
+    opacity: .5;
+}

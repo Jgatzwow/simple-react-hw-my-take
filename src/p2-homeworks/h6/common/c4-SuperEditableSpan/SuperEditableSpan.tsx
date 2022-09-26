@@ -1,10 +1,11 @@
 import React, {
   DetailedHTMLProps,
-  InputHTMLAttributes,
   HTMLAttributes,
+  InputHTMLAttributes,
   useState,
 } from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
+import styles from "../../Hw6.module.css";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<
@@ -61,12 +62,13 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
     onDoubleClick && onDoubleClick(e);
   };
 
-  const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+  const spanClassName = `${styles.span} ${className}`;
 
   return (
     <>
       {editMode ? (
         <SuperInputText
+          className={styles.input}
           autoFocus // пропсу с булевым значением не обязательно указывать true
           onBlur={onBlurCallback}
           onEnter={onEnterCallback}
