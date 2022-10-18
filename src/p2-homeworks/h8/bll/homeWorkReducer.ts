@@ -3,7 +3,7 @@ import { UserType } from "../HW8";
 export const homeWorkReducer = (
   state: UserType[],
   action: ActionsType
-): any => {
+): UserType[] => {
   // need to fix any
   switch (action.type) {
     case "SORT-UP": {
@@ -12,7 +12,7 @@ export const homeWorkReducer = (
       return stateCopy.sort((a, b) => a.name.localeCompare(b.name));
     }
     case "SORT-DOWN":
-      return [...state.sort((a, b) => (a.name > b.name ? -1 : 1))];
+      return [...state].sort((a, b) => (a.name > b.name ? -1 : 1));
     case "FILTER-BY-AGE": {
       // need to fix
       return state.filter((u) => u.age > 18);
