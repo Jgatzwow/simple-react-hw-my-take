@@ -1,4 +1,4 @@
-.hw9__wrapper {
+.hw10__wrapper {
     display: flex;
     flex-direction: column;
     max-width: 700px;
@@ -7,16 +7,13 @@
     border: 1px solid black;
     margin-bottom: 10px;
 }
-.hw9__title {
+
+.hw10__title {
     padding: 20px;
 }
 
-.time {
-    font-size: 24px;
-}
-
-
-.btn {
+.hw10__btn {
+    height: 60px;
     border: 2px solid #422800;
     border-radius: 30px;
     box-shadow: #422800 4px 4px 0 0;
@@ -33,14 +30,19 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.btn:hover {
+.hw10__btn:hover {
     background-color: #fff;
 }
 
-.btn:active {
+.hw10__btn:active {
     box-shadow: #422800 2px 2px 0 0;
     transform: translate(2px, 2px);
+}
+.hw10_preLoader {
+    height: 56px;
+    width: 56px;
+    margin-bottom: 20px;
 }

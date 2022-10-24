@@ -1,11 +1,12 @@
 import React from "react";
 import Clock from "./Clock";
+import styles from "./Clock.module.css";
 
 function HW9() {
   return (
-    <div>
+    <div className={styles.hw9__wrapper}>
       <hr />
-      homeworks 9{/*should work (должно работать)*/}
+      <h2 className={styles.hw9__title}>homeworks 9</h2>
       <Clock />
       <hr />
       {/*для личного творчества, могу проверить*/}
