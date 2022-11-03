@@ -23,17 +23,6 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = ({
   const maxSliderValue = value ? value[1] : 100;
   const [finalVal, setFinalVal] = useState([minSliderValue, maxSliderValue]);
 
-  /*  const handleChange = (event: Event, newValue: number | number[]) => {
-        if (finalVal[1] < finalVal[0] + 4) {
-          finalVal[0] = finalVal[1] - 4;
-          if (finalVal[0] === min) {
-            finalVal[1] = 4;
-          }
-        }
-        setFinalVal(newValue as number[]);
-        onChangeRange && onChangeRange([finalVal[0], finalVal[1]]);
-      };*/
-
   function valuetext(value: number) {
     return `${value}°C`;
   }
