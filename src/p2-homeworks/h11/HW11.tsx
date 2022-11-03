@@ -6,7 +6,14 @@ import "../../App.css";
 function HW11() {
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(100);
-  const step = 10;
+  const step = 1;
+  const min = 0;
+  const max = 100;
+  const setFinalValue = (value: [number, number]) => {
+    setValue1(value[0]);
+    setValue2(value[1]);
+  };
+
   return (
     <div>
       <hr />
@@ -17,6 +24,7 @@ function HW11() {
         <SuperRange
           value={value1}
           onChangeRange={setValue1}
+          step={step}
           // сделать так чтоб value1 изменялось
         />
       </div>
@@ -24,10 +32,10 @@ function HW11() {
         <span>{value1}</span>
         <SuperDoubleRange
           value={[value1, value2]}
-          min={value1}
-          max={value2}
+          min={min}
+          max={max}
           step={step}
-          disabled
+          onChangeRange={(value) => setFinalValue(value)}
           // сделать так чтоб value1 и value2 изменялось
         />
         <span>{value2}</span>
