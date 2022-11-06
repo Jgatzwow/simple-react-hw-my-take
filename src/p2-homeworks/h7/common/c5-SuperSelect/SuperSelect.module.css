@@ -2,7 +2,39 @@
     background: yellow;
     width: 10vw;
     padding: 5px;
-    margin-bottom: 5px ;
     font-size: 20px;
     font-weight: 500;
+    margin-left: auto;
+}
+
+.ua {
+    background-color: #0064bd;
+}
+
+.ua-text {
+    color: yellow;
+}
+
+.dark {
+    background: dimgrey;
+}
+
+.dark-text {
+    color: aliceblue;
+}
+
+.red {
+    background: lightcoral;
+}
+
+.red-text {
+    color: aqua;
+}
+
+.some {
+    background: lightgreen;
+}
+
+.some-text {
+    color: darkslateblue;
 }

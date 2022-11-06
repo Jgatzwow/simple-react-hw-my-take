@@ -4,6 +4,9 @@ import React, {
   ChangeEvent,
 } from "react";
 import styles from "./SuperSelect.module.css";
+import { useSelector } from "react-redux";
+import { AppStoreType } from "../../../h10/bll/store";
+
 type DefaultSelectPropsType = DetailedHTMLProps<
   SelectHTMLAttributes<HTMLSelectElement>,
   HTMLSelectElement
@@ -20,6 +23,9 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
   onChangeOption,
   ...restProps
 }) => {
+  const theme = useSelector<AppStoreType, string>(
+    (state) => state.themes.theme
+  );
   const mappedOptions: any[] = options
     ? options.map((o, idx) => {
         return (
@@ -36,15 +42,17 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     // onChange, onChangeOption
   };
 
+  const superSelectUltimateClassName = `${styles.SuperSelect} + ' ' + ${
+    styles[theme]
+  } + ' ' + ${styles[theme + "-text"]}`;
   return (
     <select
       onChange={onChangeCallback}
       {...restProps}
-      className={styles.SuperSelect}
+      className={superSelectUltimateClassName}
     >
       {mappedOptions}
     </select>
   );
 };
-
 export default SuperSelect;

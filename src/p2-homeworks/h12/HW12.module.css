@@ -1,23 +1,51 @@
 .dark {
     background: dimgrey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+}
+
+.ua {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: #0064bd;
+}
+
+.ua-text {
+    font-size: 20px;
+    color: yellow;
 }
 
 .dark-text {
+    font-size: 20px;
     color: aliceblue;
 }
 
 .red {
     background: lightcoral;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
 }
 
 .red-text {
+    font-size: 20px;
     color: aqua;
 }
 
 .some {
     background: lightgreen;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
 }
 
 .some-text {
+    font-size: 20px;
     color: darkslateblue;
 }
