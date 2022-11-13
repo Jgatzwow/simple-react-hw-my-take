@@ -10,7 +10,6 @@ export const themeReducer = (
   // fix any
   switch (action.type) {
     case "SET-THEME": {
-      debugger;
       return { ...state, theme: action.payload.theme };
     }
     default:

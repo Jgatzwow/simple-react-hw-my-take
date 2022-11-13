@@ -12,7 +12,6 @@ const HW12 = () => {
   const theme = useSelector<AppStoreType, string>(
     (state) => state.themes.theme
   ); // useSelector
-  console.log(theme);
 
   const dispatch = useDispatch();
 

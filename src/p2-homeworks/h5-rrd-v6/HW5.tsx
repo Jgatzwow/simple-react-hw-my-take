@@ -9,11 +9,10 @@ function HW5() {
       {/*в gh-pages лучше работает HashRouter*/}
       <HashRouter>
         <Header />
-
         <Pages />
       </HashRouter>
     </div>
   );
 }
 
-export default HW5
+export default HW5;
